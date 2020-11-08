@@ -1,0 +1,21 @@
+<div class="backdrop"></div>
+
+<div class="modal">
+  <nav class="center">
+    <h1>" {{ title }} "</h1>
+  </nav>
+
+  <p class="center modal-question">
+    Are you really going to delete ??
+  </p>
+  <hr>
+
+<div class="btn-modal">
+    <button class="btn green" (click)="toDelete.emit()">Yes</button>
+   <img class="delete-gif" src="assets/delete2.gif"> 
+    <button class="btn red" (click)="close.emit()">NO</button>
+
+</div>
+ 
+
+</div>

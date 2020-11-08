@@ -1,0 +1,47 @@
+.header{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;  
+    padding-bottom: 30px;
+}
+
+.logo{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav{
+    max-width: 200px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+}
+button{
+    padding: 5px;
+    width: 60px;
+    color: white;
+    background-color: rgb(41, 130, 202);
+    border-radius: 5px;
+}
+
+.active{
+    font-weight: bold;
+    box-shadow: 4px 4px 8px -1px #000000;
+}
+
+.btn-out{
+    background-color: red;
+    box-shadow: none;
+}

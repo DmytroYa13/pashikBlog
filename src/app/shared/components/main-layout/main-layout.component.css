@@ -1,0 +1,33 @@
+.container{
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 5px;  
+    position: relative;
+}
+
+.header{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logIn{
+    width: 50px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border-radius: 70%;
+    box-shadow: 6px 7px 6px -4px rgba(87, 79, 87, 0.55); 
+
+}
+
+@media screen and (max-width: 500px) {
+    .pashik{
+        width: 85%;
+    }
+
+    .logIn{
+        top: 10px; 
+    }
+  }

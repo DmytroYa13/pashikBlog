@@ -1,0 +1,22 @@
+<div *ngIf="post">
+    <h2 class="title">{{post.title}}</h2>
+    <hr>
+    <div class="date">
+        <small>{{post.date | date:"dd.MM.yyyy" }}</small>
+    </div>
+    <p>
+        <quill-view-html [content]="post.text"></quill-view-html>
+    </p>
+    <p class="p-btn">
+        <button class="btn-exit" (click)="toMain()">To main page</button>
+    </p>
+
+    <div #toUp class="back_to_top" (click)="goToUp()"><img class="up" src="assets/up.png" alt=""></div>
+</div>
+
+
+<ng-template #loading>
+    <div class="loaded">
+        <img src="assets/loading.gif">
+    </div>
+</ng-template>

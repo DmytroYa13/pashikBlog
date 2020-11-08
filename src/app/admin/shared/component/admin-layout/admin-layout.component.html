@@ -1,0 +1,16 @@
+
+ <div class="header">
+    <div class="logo"><img [routerLink]="['/']" class="pashik-logo" src="assets/logo-removebg-preview.png"></div>
+    <div *ngIf="auth.isAuthenticated()" class="nav">
+        <button [routerLink]="['/admin','board']" routerLinkActive="active">Board</button>
+        <button [routerLink]="['/admin','create']" routerLinkActive="active">Create</button>
+        <button class="btn-out active" (click)="logOut($event)">Exit</button>
+    </div>
+   
+</div>
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+

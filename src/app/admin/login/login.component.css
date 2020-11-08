@@ -1,0 +1,67 @@
+form{
+    margin: 30px auto;
+    max-width: 500px;
+    width: 95%;
+    background-color: honeydew;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(84, 145, 153) ;
+    box-sizing: border-box;
+}
+.form-main{
+    padding: 0 20px; 
+}
+h2{
+    text-align: center;
+    color: gray;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+.form-input{
+    width: 90%;
+    box-shadow: 0px 0px 5px 8px rgb(216, 219, 219) ;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.form-flex{
+    display: flex;
+    justify-content: center;
+}
+button[type="submit"]{
+    background-color: rgb(64, 211, 64);
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 200px;
+    width: 50%;
+    color: white;
+    font-weight: bold  
+}
+button:disabled{
+    background-color: rgb(185, 28, 28);
+    color: rgb(102, 18, 18);
+
+}
+.p-submit{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form+p{
+    text-align: center;
+    color: rgb(45, 122, 194);
+}
+
+.ng-valid.ng-touched:not(form):not(div)  {
+    border: 3px solid rgb(29, 184, 29); 
+
+  }
+  
+.ng-invalid.ng-touched:not(form):not(div)  {
+    border: 3px solid red; 
+  }
+
+  a{
+      color: red;
+  }

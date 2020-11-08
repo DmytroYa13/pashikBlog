@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div >
+        <div>
+            <p class="input-flex">
+                <input class="form-input" type="text" placeholder="Please, type the title here..."
+                    formControlName="title">
+            </p>
+        </div>
+
+        <div [ngStyle]="quillStyle()">
+            <quill-editor formControlName="text"></quill-editor>
+        </div>
+
+
+        <p class="p-submit">
+            <button type="submit" [disabled]='form.invalid || submited'>Save Post</button>
+        </p>
+    </div>
+  
+</form>

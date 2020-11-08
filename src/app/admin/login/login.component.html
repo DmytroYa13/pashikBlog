@@ -1,0 +1,22 @@
+<form [formGroup]='form' (ngSubmit)="submitOn(form)">
+    <h2>Login to PashikBlog</h2>
+
+    <div class="form-main">
+        <p class="form-flex">
+            <input class="form-input" type="text" id="email" placeholder="Email..." formControlName="email">
+        </p>
+
+        <p class="form-flex">
+            <input class="form-input" type="password" id="password" placeholder="Password..."
+                formControlName="password">
+        </p>
+
+        <p class="p-submit">
+                <button type="submit" [disabled]='form.invalid || submited'>Login </button>
+        </p>
+    </div>
+
+</form>
+<p >
+    <b> Forgot your password ?</b> Click <a href="tg://resolve?domain=DmytrYa"> here</a>.
+</p>

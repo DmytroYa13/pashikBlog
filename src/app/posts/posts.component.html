@@ -1,0 +1,16 @@
+
+<div *ngIf="loaded; else loading" > 
+    <app-one-post *ngFor="let post of posts" [post]="post"></app-one-post>
+
+</div>
+
+<ng-template  #loading>
+    <div class="loaded">
+    <img src="assets/loading.gif" >
+    </div>
+</ng-template>
+
+
+<div *ngIf="!posts && loaded" class="loaded">
+    <img src="assets/noresults.gif">
+</div>

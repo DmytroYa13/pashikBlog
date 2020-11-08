@@ -1,0 +1,60 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(63, 75, 145, 0.349);
+  }
+  
+  .modal {
+    max-width: 400px;
+    width: 80%;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 1rem;
+    position: absolute;
+    left: 50%;
+    top:20%;
+    transform: translate(-50%, 0);
+    box-shadow: 6px 7px 6px -4px rgba(87, 79, 87, 0.55); 
+
+  }
+
+.center{
+    text-align: center;
+}  
+.modal-question{
+  padding:5px 0;
+}
+
+h1{
+    margin: 5px;
+}
+.delete-gif{
+    width: 50%;
+}
+.btn-modal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 16px;
+    height: 76px;
+    overflow: hidden;
+}
+
+.btn{
+    color: white;
+    font-weight: bolder;
+    padding:  8px 0;
+    margin: 3px;
+    border: none;
+    border-radius: 3px;
+    width: 75px;
+}
+.red{
+  background-color: crimson;
+}
+.green{
+  background-color: rgb(70, 212, 35);
+}

@@ -1,0 +1,49 @@
+<ng-template  #loading>
+    <div class="loaded">
+    <img src="assets/loading.gif" >
+    </div>
+</ng-template>
+
+<div>
+    <div  *ngIf="loaded || posts.length; else loading">
+        <div  *ngIf="posts.length">
+    <p class="p-form-input">
+        <input class="form-input" type="text" [(ngModel)]="search" placeholder="I am looking for">
+   <span *ngIf="search.length" (click)="search=''"><img class="close" src="assets/1.png" ></span>
+    </p>
+    <table>
+        
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>DATA</th>
+            <th>ACTION</th>
+        </tr>
+        <tr *ngFor="let post of posts | searchPost:search ; let i = index">
+            <td><b>{{i+1}}</b></td>
+            <td>{{post.title}}</td>
+            <td>{{post.date | date:"dd-MM-yyyy"}}</td>
+            <td>
+                <button class="btn red" (click)="deleteBtn(post)">Delete</button>
+                <button [routerLink]="['/admin','edit', post.id]" class="btn blue" >Edit</button>
+            </td>
+        </tr>
+      
+    </table>
+   
+    
+</div>
+
+</div>
+<div *ngIf="!(posts | searchPost:search).length && loaded" class="loaded">
+    <img src="assets/noresults.gif">
+</div>
+</div>
+
+<app-modal-window
+*ngIf="modal"
+[title]='titleToDelete.title'
+(toDelete) = "delete(titleToDelete)"
+(close)="modal = false">
+
+</app-modal-window>

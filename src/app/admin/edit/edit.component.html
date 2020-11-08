@@ -1,0 +1,35 @@
+<ng-template #loading>
+    <div class="loading">
+        <img src="assets/loading.gif">
+    </div>
+</ng-template>
+
+<div *ngIf="this.formEdit; else loading">
+    <form [formGroup]="formEdit" (ngSubmit)="submit()">
+
+        <div >
+            <div>
+                <p class="input-flex">
+                    <input class="form-input" placeholder="Please, type the title over here..." formControlName="title">
+                </p>
+            </div>
+
+            <div [ngStyle]="quillStyle()">
+                <quill-editor formControlName="text"></quill-editor>
+            </div>
+
+            <p class="p-submit">
+                <button type="submit" [disabled]="(!formEdit.get('title').dirty && !formEdit.get('text').dirty) || formEdit.invalid || submitted"
+                    >Update </button>
+            </p>
+
+            <div class="p-submit">
+                <button class="btn-exit" [routerLink]="['/admin','board']">To Board </button>
+            </div>
+        </div>
+
+  
+    </form>
+
+   
+</div>
